@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Crear Programa{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <h4 class="mb-0">Registrar Nuevo Programa Universitario</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Guardar Programa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
